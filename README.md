@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project automates the process of sending GCC news updates via email every 24 hours. The script fetches news articles from an RSS feed, summarizes them using Google's Generative AI, and sends the summarized news to a specified recipient.
+This project automates the process of sending GCC news updates via email every 24 hours. The script fetches news articles from an RSS feed, summarizes them using Google's Generative AI, and sends the summarized news to a specified recipient.The headlines are links,when clicked on,will take you to the page of the article.
 
 ## Features
 
