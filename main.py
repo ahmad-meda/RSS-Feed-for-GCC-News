@@ -101,7 +101,7 @@ def working(article_list):
     try:
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login(email, "zacltknhfrcteuxg")  # Replace with your actual email password
+        server.login(email, "YOUR_EMAIL_PASSWORD")  # Replace with your actual email password
         server.send_message(msg)
         server.quit()
         print("Email sent successfully to " + receiver_email)
