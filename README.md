@@ -1,31 +1,38 @@
-# GCC News Update Email Script
+# GCC News Email Automation Project
 
-This Python script fetches news stories from an RSS feed, processes the stories, and sends an email with the selected story in a structured format. The script utilizes Google's Gemini AI for generating text content.
+## Project Overview
+
+This project automates the process of sending GCC news updates via email every 24 hours. The script fetches news articles from an RSS feed, summarizes them using Google's Generative AI, and sends the summarized news to a specified recipient.
 
 ## Features
 
-- Fetches news stories from a specified RSS feed.
-- Selects a specific story based on criteria provided to Gemini AI.
-- Generates a LinkedIn-style post using Gemini AI.
-- Sends an email with the structured news story content.
+- **Fetches News Articles**: Retrieves news articles from a specified RSS feed URL.
+- **Summarizes Articles**: Uses Google's Generative AI to generate concise summaries of the news articles.
+- **Email Automation**: Sends the summarized news via email to a specified recipient.
+- **Scheduled Execution**: Runs the entire process automatically every 24 hours.
 
-## Requirements
+## Prerequisites
 
-- Python 3.x
-- The following Python libraries:
-  - `feedparser`
-  - `smtplib`
-  - `email.mime.multipart`
-  - `email.mime.text`
-  - `google.generativeai`
+Before you begin, ensure you have met the following requirements:
+
+- **Python 3**: Make sure Python 3 is installed on your system.
+- **Required Python Packages**:
+  - `feedparser`: Used to parse the RSS feed.
+  - `smtplib`: Used to send emails.
+  - `email`: Used to construct the email content.
+  - `google-generativeai`: Used to access Google's Generative AI for summarizing articles.
+  - `schedule`: Used to schedule the script to run every 24 hours.
 
 ## Installation
 
-1. Install Python 3.x from the official website: [Python.org](https://www.python.org/).
-2. Install the required Python libraries using pip:
+Follow these steps to set up and run the project:
 
-    ```sh
-    pip install feedparser smtplib google-generativeai
+1. **Clone the repository**:
+   Clone the project repository to your local machine using the following command:
+   ```sh
+   git clone <repository_url>
+   cd <repository_directory>
+
     ```
 
 ## Configuration
@@ -42,7 +49,7 @@ This Python script fetches news stories from an RSS feed, processes the stories,
 
 3. **Generating Content with Gemini AI**: The `gemini_promt()` function interacts with Gemini AI to generate specific content based on the prompt provided.
 
-4. **Selecting an Article**: The `gemini()` function uses Gemini AI to choose an article based on specified criteria.
+4. **Selecting Top 5 Articles with Big Headlines and GCC content**: The `gemini()` function uses Gemini AI to choose an article based on specified criteria.
 
 5. **Constructing and Sending the Email**: The `working()` function constructs the email content and sends it.
 
